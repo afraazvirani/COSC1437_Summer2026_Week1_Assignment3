@@ -1,5 +1,12 @@
 Name: Giselle Robinson, Department: Accounting
 Monthly Gross Salary: $5600.00, Bonus: 5.00%, Taxes: 30.00%
 Paycheck: $4200.00
-Distance Travelled: 450.00 miles, Travel Time: 9.00 hours
+Distance Traveled: 450.00 miles, Travel Time: 9.00 hours
 Average Speed: 50.00 miles per hour
+
+Name: Afraaz Virani, Department: Accounting
+Monthly Gross Salary: $5600.00, Bonus: 5.00%, Taxes: 30.00%
+Paycheck: $4200.00
+Distance Traveled: 450.00 miles, Travel Time: 9.00 hours
+Average Speed: 50.00 miles per hour
+

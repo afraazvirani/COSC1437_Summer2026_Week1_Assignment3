@@ -63,7 +63,7 @@ int main()
         outFile << "Monthly Gross Salary: $" << grossSalary << ", Bonus: " << bonusPercent << "%, Taxes: " << taxPercent << "%" << endl;
         outFile << "Paycheck: $" << paycheck << endl;
         outFile << "Distance Traveled: " << distance << " miles, Travel Time: " << travelTime << " hours" << endl;
-        outFile << "Average Speed:" << right << setw(6) << averageSpeed << " miles per hour" << endl;
+        outFile << "Average Speed:" << right << setw(6) << averageSpeed << " miles per hour" << endl << endl;
     }
  
     // TODO G: close both files
@@ -128,7 +128,7 @@ int main()
     if (cin.fail())
     {
         cin.clear();
-        cin.ignore();
+        cin.ignore(1000, '\n');
 
         cout << "Invalid Input" << endl;
     }
