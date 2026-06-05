@@ -62,7 +62,7 @@ int main()
         outFile << "Name: " << firstName << " " << lastName << ", Department: " << department << endl;
         outFile << "Monthly Gross Salary: $" << grossSalary << ", Bonus: " << bonusPercent << "%, Taxes: " << taxPercent << "%" << endl;
         outFile << "Paycheck: $" << paycheck << endl;
-        outFile << "Distance Travelled: " << distance << " miles, Travel Time: " << travelTime << " hours" << endl;
+        outFile << "Distance Traveled: " << distance << " miles, Travel Time: " << travelTime << " hours" << endl;
         outFile << "Average Speed:" << right << setw(6) << averageSpeed << " miles per hour" << endl;
     }
  
