@@ -9,6 +9,7 @@
 #include <fstream>
 #include <string>
 #include <iomanip>
+#include <cctype>
  
 using namespace std;
  
@@ -32,6 +33,12 @@ int main()
         cout << "Error: Could not open file payrollData.txt" << endl;
         return 1;
     }
+
+    if (!outFile)                               //Correcrion#1 : Added check for outFile
+    {
+        cout << "Error: Could not open file payrollReport.txt" << endl;    
+        return 1;
+    }
  
  
     // Variables for one employee's data
@@ -53,9 +60,17 @@ int main()
  
         // TODO E: compute paycheck and averageSpeed
         paycheck = grossSalary + (grossSalary * bonusPercent / 100) - (grossSalary * taxPercent / 100);
-        averageSpeed = distance / travelTime;
+        
+        if (travelTime != 0)                          //Correcrion#2 : Added a divide by zero guard
+        {
+            averageSpeed = distance / travelTime;
+        }
+        else
+        {
+            averageSpeed = 0;
+        }
  
- 
+        
         // TODO F: write the formatted report block for this employee
         //         remember fixed/showpoint/setprecision are already set,
         //         and use setw at least once.
@@ -81,12 +96,12 @@ int main()
     cout << "Enter a sentence:" << endl;
 
     char firstCharacter = cin.peek();
-    if (firstCharacter >= '0' && firstCharacter <= '9')
+    if (isdigit(firstCharacter))                              //Correcrion#3 : replaced manual check for digit
     {
         cout << "The first character is a digit" << endl;
     }
     
-    else if ((firstCharacter >= 'A' && firstCharacter <= 'Z') || (firstCharacter >= 'a' && firstCharacter <= 'z'))
+    else if (isalpha(firstCharacter))                         //Correcrion#4 : replaced manual check for character
     {
         cout << "The first character is a letter" << endl;
     }
@@ -110,7 +125,7 @@ int main()
     cout << "Enter an integer:" << endl;
     cin >> userInteger;
 
-    cin.ignore();
+    cin.ignore(1000, '\n');                         //Correcrion#5 : updated cin.ignore() with arguments
 
     cout << "Enter a description:" << endl;
     getline(cin, userDescription);
